@@ -8,7 +8,21 @@
 	{
 		Tags { "RenderType"="Opaque" }
 		LOD 100
-		Blend SrcAlpha OneMinusSrcAlpha
+
+		//Blend Off
+
+		//Blend SrcAlpha OneMinusSrcAlpha
+		//BlendOp Add
+		//BlendOp Sub
+		//BlendOp RevSub
+		//BlendOp Min
+		//BlendOp Max
+
+		//-- BlendOp OpColor, OpAlpha：同上，但是使用不同的要素来混合alpha通道
+		//BlendOp Min, Max
+		BlendOp Max, Min
+
+		AlphaToMask On//使用抗锯齿的时候
 
 		Pass
 		{
